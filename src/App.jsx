@@ -70,6 +70,10 @@ export default function App(){
           <ActivityList activities={state.activities} weight={state.weight} onDelete={delActivity} showToast={showToast}/>
           <GoalsCard t={t} water={state.water} setWater={setWater}/>
         </div>
+        <footer className="footer">
+          <div className="tricolor"/>
+          <p>Made in 🇮🇳 <span className="bharat">Bharat</span> by <b>Fiza Ansari</b></p>
+        </footer>
       </div>
       <div id="toast" className={toast ? 'show' : ''}>{toast?.msg || ''}</div>
     </>
