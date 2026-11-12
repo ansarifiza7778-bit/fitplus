@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Fiza Ansari — Creative Developer & Designer</title>
 <meta name="description" content="Portfolio of Fiza Ansari — Creative Developer & UI/UX Designer crafting premium digital experiences." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%238b5cf6'/%3E%3Cstop offset='1' stop-color='%2322d3ee'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='45' font-family='Arial' font-size='36' font-weight='bold' text-anchor='middle' fill='%230b0b12'%3EF%3C/text%3E%3C/svg%3E" />
+<meta property="og:title" content="Fiza Ansari — Creative Developer & Designer" />
+<meta property="og:description" content="Portfolio of Fiza Ansari — crafting premium, high-performance digital experiences. Available for freelance & full-time roles." />
+<meta property="og:type" content="website" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -274,7 +278,7 @@
     font-family:'Inter',sans-serif; transition:all .25s;
   }
   .filter.active,.filter:hover{ background:var(--grad); color:#0b0b12; border-color:transparent; font-weight:600; }
-  .projects-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+  .projects-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; perspective:1200px; }
   .project{
     border:1px solid var(--card-border); border-radius:var(--radius); overflow:hidden;
     background:var(--card); transition:transform .35s, box-shadow .35s, opacity .35s;
@@ -382,6 +386,51 @@
   }
   #toast.show{ transform:translate(-50%,0); opacity:1; }
 
+  /* ============ PRELOADER ============ */
+  #preloader{
+    position:fixed; inset:0; z-index:500; background:var(--bg);
+    display:grid; place-items:center; transition:opacity .7s ease, visibility .7s ease;
+  }
+  #preloader.done{ opacity:0; visibility:hidden; }
+  .pre-name{
+    font-family:'Sora',sans-serif; font-weight:800; letter-spacing:.14em;
+    font-size:clamp(1.9rem,6vw,3.2rem); display:flex; gap:.09em; text-transform:uppercase;
+  }
+  .pre-name span{ animation:rise .65s cubic-bezier(.2,.85,.25,1) both; }
+  @keyframes rise{ from{ opacity:0; transform:translateY(30px) rotate(8deg); } to{ opacity:1; transform:none; } }
+  .pre-bar{ width:190px; height:3px; background:var(--chip); border-radius:99px; overflow:hidden; margin:24px auto 0; }
+  .pre-bar i{ display:block; height:100%; width:0; background:var(--grad); animation:preload 1.05s ease forwards; }
+  @keyframes preload{ to{ width:100%; } }
+
+  /* ============ SCROLL PROGRESS ============ */
+  #progress{
+    position:fixed; top:0; left:0; height:3px; width:0; z-index:400;
+    background:var(--grad); box-shadow:0 0 12px rgba(139,92,246,.7); border-radius:0 99px 99px 0;
+  }
+
+  /* ============ MOUSE SPOTLIGHT ============ */
+  #spot{
+    position:fixed; left:0; top:0; width:560px; height:560px; border-radius:50%;
+    pointer-events:none; z-index:1;
+    background:radial-gradient(circle, rgba(139,92,246,.1) 0%, rgba(34,211,238,.05) 40%, transparent 68%);
+  }
+  @media (hover:none){ #spot{ display:none; } }
+
+  /* ============ TECH MARQUEE ============ */
+  .marquee{
+    overflow:hidden; padding:20px 0; background:var(--bg-soft);
+    border-top:1px solid var(--hairline); border-bottom:1px solid var(--hairline);
+    mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+  }
+  .marquee-track{ display:flex; width:max-content; animation:scrollX 30s linear infinite; }
+  .marquee:hover .marquee-track{ animation-play-state:paused; }
+  .marquee-track span{
+    white-space:nowrap; font-family:'Sora',sans-serif; font-weight:600;
+    font-size:1rem; letter-spacing:.16em; text-transform:uppercase; color:var(--muted);
+  }
+  @keyframes scrollX{ to{ transform:translateX(-50%); } }
+
   /* ============ RESPONSIVE ============ */
   @media (max-width:980px){
     .about-grid,.contact-grid{ grid-template-columns:1fr; gap:44px; }
@@ -407,6 +456,20 @@
 </style>
 </head>
 <body>
+
+<!-- ================= PRELOADER ================= -->
+<div id="preloader">
+  <div style="text-align:center">
+    <div class="pre-name">
+      <span style="animation-delay:.05s">F</span><span style="animation-delay:.1s">i</span><span style="animation-delay:.15s">z</span><span style="animation-delay:.2s">a</span>
+      <span style="animation-delay:.3s; color:transparent; background:var(--grad); -webkit-background-clip:text; background-clip:text;">A</span><span style="animation-delay:.35s; color:transparent; background:var(--grad); -webkit-background-clip:text; background-clip:text;">n</span><span style="animation-delay:.4s; color:transparent; background:var(--grad); -webkit-background-clip:text; background-clip:text;">s</span><span style="animation-delay:.45s; color:transparent; background:var(--grad); -webkit-background-clip:text; background-clip:text;">a</span><span style="animation-delay:.5s; color:transparent; background:var(--grad); -webkit-background-clip:text; background-clip:text;">r</span><span style="animation-delay:.55s; color:transparent; background:var(--grad); -webkit-background-clip:text; background-clip:text;">i</span>
+    </div>
+    <div class="pre-bar"><i></i></div>
+  </div>
+</div>
+
+<div id="progress"></div>
+<div id="spot"></div>
 
 <div class="bg-orbs">
   <div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div>
@@ -451,7 +514,7 @@
     </p>
     <div class="hero-actions reveal in d3">
       <a href="#projects" class="btn btn-primary">View My Work →</a>
-      <a href="#contact" class="btn btn-ghost">Download Résumé ⤓</a>
+      <a href="#contact" class="btn btn-ghost">Let's Talk 💬</a>
     </div>
     <div class="hero-stats reveal in d4">
       <div class="stat"><b class="grad-text counter" data-target="25">0</b><span>Projects Done</span></div>
@@ -462,6 +525,14 @@
   </div>
   <div class="scroll-hint">Scroll ↓</div>
 </section>
+
+<!-- ================= TECH MARQUEE ================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>React ✦ UI/UX Design ✦ Figma ✦ JavaScript ✦ Node.js ✦ Tailwind CSS ✦ Framer Motion ✦ MongoDB ✦ GSAP ✦ Next.js ✦ Responsive Design ✦&nbsp;</span>
+    <span>React ✦ UI/UX Design ✦ Figma ✦ JavaScript ✦ Node.js ✦ Tailwind CSS ✦ Framer Motion ✦ MongoDB ✦ GSAP ✦ Next.js ✦ Responsive Design ✦&nbsp;</span>
+  </div>
+</div>
 
 <!-- ================= ABOUT ================= -->
 <section id="about">
@@ -477,10 +548,8 @@
           <h3>Fiza Ansari</h3>
           <span>Creative Developer & Designer</span>
           <div class="socials">
-            <a href="#" title="GitHub">⌥</a>
-            <a href="#" title="LinkedIn">in</a>
-            <a href="#" title="Twitter">𝕏</a>
-            <a href="#" title="Instagram">◎</a>
+            <a href="https://github.com/ansarifiza7778-bit" target="_blank" rel="noopener noreferrer" title="GitHub">⌥</a>
+            <a href="https://www.linkedin.com/in/fiza-ansari-7a4546435" target="_blank" rel="noopener noreferrer" title="LinkedIn">in</a>
           </div>
         </div>
       </div>
@@ -747,6 +816,40 @@
 <div id="toast">✅ Message sent! I'll get back to you soon.</div>
 
 <script>
+  /* ---------- Preloader ---------- */
+  const hidePre = () => document.getElementById('preloader').classList.add('done');
+  if (document.readyState === 'complete') setTimeout(hidePre, 900);
+  else window.addEventListener('load', () => setTimeout(hidePre, 900));
+
+  /* ---------- Scroll progress ---------- */
+  const progressBar = document.getElementById('progress');
+  const updateProgress = () => {
+    const max = document.body.scrollHeight - window.innerHeight;
+    progressBar.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
+  };
+  updateProgress();
+
+  /* ---------- Mouse spotlight ---------- */
+  const spot = document.getElementById('spot');
+  let sx = window.innerWidth / 2, sy = window.innerHeight / 2, tx = sx, ty = sy;
+  window.addEventListener('mousemove', e => { tx = e.clientX; ty = e.clientY; });
+  (function spotLoop(){
+    sx += (tx - sx) * .08; sy += (ty - sy) * .08;
+    spot.style.transform = `translate(${sx}px,${sy}px) translate(-50%,-50%)`;
+    requestAnimationFrame(spotLoop);
+  })();
+
+  /* ---------- Project 3D tilt ---------- */
+  document.querySelectorAll('.project').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const r = card.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width - .5;
+      const y = (e.clientY - r.top) / r.height - .5;
+      card.style.transform = `translateY(-8px) rotateX(${(-y * 7).toFixed(2)}deg) rotateY(${(x * 7).toFixed(2)}deg)`;
+    });
+    card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+  });
+
   /* ---------- Sticky header ---------- */
   const header = document.getElementById('header');
   const toTop = document.getElementById('toTop');
@@ -754,6 +857,7 @@
     header.classList.toggle('scrolled', window.scrollY > 40);
     toTop.classList.toggle('show', window.scrollY > 600);
     highlightNav();
+    updateProgress();
   });
   toTop.addEventListener('click', () => window.scrollTo({ top:0, behavior:'smooth' }));
 
