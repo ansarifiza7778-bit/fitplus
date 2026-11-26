@@ -1,0 +1,209 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="36%" r="80%">
+      <stop offset="0%" stop-color="#fdf6ff"/>
+      <stop offset="52%" stop-color="#e9e2ff"/>
+      <stop offset="100%" stop-color="#c9f2f0"/>
+    </radialGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity=".9"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hair" x1="0.15" y1="0" x2="0.75" y2="1">
+      <stop offset="0%" stop-color="#4b3a60"/>
+      <stop offset="45%" stop-color="#31263f"/>
+      <stop offset="100%" stop-color="#1c1628"/>
+    </linearGradient>
+    <linearGradient id="bangs" x1="0.1" y1="0" x2="0.6" y2="1">
+      <stop offset="0%" stop-color="#54416b"/>
+      <stop offset="60%" stop-color="#2e2340"/>
+      <stop offset="100%" stop-color="#241b33"/>
+    </linearGradient>
+    <radialGradient id="skin" cx="50%" cy="36%" r="72%">
+      <stop offset="0%" stop-color="#ffe9da"/>
+      <stop offset="68%" stop-color="#f9d3bd"/>
+      <stop offset="100%" stop-color="#edbda4"/>
+    </radialGradient>
+    <linearGradient id="hoodie" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#e2d9ff"/>
+      <stop offset="55%" stop-color="#bda9fb"/>
+      <stop offset="100%" stop-color="#9b82f0"/>
+    </linearGradient>
+    <linearGradient id="scarf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#a7f3e4"/>
+      <stop offset="55%" stop-color="#5eead4"/>
+      <stop offset="100%" stop-color="#1fb5a3"/>
+    </linearGradient>
+    <radialGradient id="iris" cx="42%" cy="30%" r="74%">
+      <stop offset="0%" stop-color="#c68f57"/>
+      <stop offset="55%" stop-color="#8a5327"/>
+      <stop offset="100%" stop-color="#43220d"/>
+    </radialGradient>
+    <linearGradient id="petal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffd6e0"/>
+      <stop offset="100%" stop-color="#fb9db4"/>
+    </linearGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <filter id="soft2" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+  </defs>
+
+  <!-- ================= BACKGROUND ================= -->
+  <rect width="1000" height="1000" fill="url(#bg)"/>
+  <circle cx="500" cy="430" r="340" fill="url(#halo)"/>
+
+  <g opacity=".55">
+    <circle cx="132" cy="168" r="58" fill="#c4b5fd" opacity=".45"/>
+    <circle cx="206" cy="742" r="86" fill="#99f6e4" opacity=".38"/>
+    <circle cx="858" cy="212" r="70" fill="#fbcfe8" opacity=".45"/>
+    <circle cx="884" cy="806" r="96" fill="#c4b5fd" opacity=".35"/>
+    <circle cx="66" cy="470" r="40" fill="#fde68a" opacity=".40"/>
+    <circle cx="762" cy="72" r="34" fill="#a5f3fc" opacity=".55"/>
+    <circle cx="404" cy="936" r="46" fill="#fbcfe8" opacity=".30"/>
+    <circle cx="620" cy="60" r="22" fill="#ffffff" opacity=".65"/>
+  </g>
+
+  <g fill="#ffffff" opacity=".92">
+    <path d="M150 300 q6 20 26 26 q-20 6 -26 26 q-6 -20 -26 -26 q20 -6 26 -26Z"/>
+    <path d="M862 420 q5 16 21 21 q-16 5 -21 21 q-5 -16 -21 -21 q16 -5 21 -21Z"/>
+    <path d="M96 620 q5 16 21 21 q-16 5 -21 21 q-5 -16 -21 -21 q16 -5 21 -21Z"/>
+    <path d="M930 620 q4 13 17 17 q-13 4 -17 17 q-4 -13 -17 -17 q13 -4 17 -17Z"/>
+    <path d="M300 120 q4 13 17 17 q-13 4 -17 17 q-4 -13 -17 -17 q13 -4 17 -17Z"/>
+  </g>
+  <g fill="#a78bfa" opacity=".55">
+    <circle cx="238" cy="392" r="4"/>
+    <circle cx="740" cy="530" r="5"/>
+    <circle cx="128" cy="852" r="4"/>
+    <circle cx="908" cy="330" r="4"/>
+    <circle cx="352" cy="62" r="4"/>
+    <circle cx="676" cy="948" r="4"/>
+  </g>
+
+  <!-- ================= BACK HAIR ================= -->
+  <path fill="url(#hair)" d="M500 228
+    C378 228 320 302 316 420
+    C312 512 300 622 284 702
+    C274 748 300 780 342 790
+    C382 800 422 796 442 778
+    L558 778
+    C578 796 618 800 658 790
+    C700 780 726 748 716 702
+    C700 622 688 512 684 420
+    C680 302 622 228 500 228 Z"/>
+
+  <!-- hair rim light -->
+  <path fill="#6a5585" opacity=".35" d="M500 236 C412 236 356 288 336 366 C356 300 408 258 500 258 C592 258 644 300 664 366 C644 288 588 236 500 236 Z"/>
+
+  <!-- ================= NECK ================= -->
+  <path fill="#f0c3aa" d="M466 470 h68 v112 q-34 24 -68 0 Z"/>
+  <path fill="#dfa68c" opacity=".6" d="M466 470 h68 v34 q-34 22 -68 0 Z"/>
+
+  <!-- ================= HOODIE BODY ================= -->
+  <path fill="url(#hoodie)" d="M258 1000
+    C258 816 346 726 444 692
+    L556 692
+    C654 726 742 816 742 1000 Z"/>
+
+  <path fill="#8f74e6" opacity=".28" d="M258 1000 C258 816 346 726 444 692 L470 692 C372 736 298 838 294 1000 Z"/>
+  <path fill="#ffffff" opacity=".20" d="M742 1000 C742 816 654 726 556 692 L530 692 C628 736 702 838 706 1000 Z"/>
+
+  <!-- hood back rim -->
+  <path fill="none" stroke="#c3b2fb" stroke-width="16" stroke-linecap="round" d="M418 698 C452 744 548 744 582 698"/>
+  <path fill="none" stroke="#a48ef2" stroke-width="6" stroke-linecap="round" opacity=".6" d="M424 702 C456 744 544 744 576 702"/>
+
+  <!-- drawstrings -->
+  <path fill="none" stroke="#ffffff" stroke-width="9" stroke-linecap="round" d="M474 714 C468 760 468 798 472 836"/>
+  <path fill="none" stroke="#ffffff" stroke-width="9" stroke-linecap="round" d="M526 714 C532 760 532 798 528 836"/>
+  <circle cx="472" cy="846" r="10" fill="#ffffff"/>
+  <circle cx="528" cy="846" r="10" fill="#ffffff"/>
+
+  <!-- little heart -->
+  <path fill="#ffffff" opacity=".85" d="M500 902 c-16 -18 -42 -6 -42 16 c0 20 26 34 42 46 c16 -12 42 -26 42 -46 c0 -22 -26 -34 -42 -16 Z"/>
+
+  <!-- ================= SCARF ================= -->
+  <path fill="url(#scarf)" d="M420 646 C460 700 540 700 580 646 L600 698 C548 754 452 754 400 698 Z"/>
+  <path fill="url(#scarf)" d="M558 688 C608 714 626 786 604 838 C580 816 568 770 550 740 Z"/>
+  <path fill="#0d9488" opacity=".26" d="M558 688 C608 714 626 786 604 838 C596 806 590 758 572 724 Z"/>
+  <path fill="none" stroke="#ffffff" stroke-width="4" opacity=".55" stroke-linecap="round" d="M428 668 C464 710 536 710 572 668"/>
+
+  <!-- ================= EARS ================= -->
+  <ellipse cx="380" cy="414" rx="17" ry="27" fill="#f3c8b0"/>
+  <ellipse cx="620" cy="414" rx="17" ry="27" fill="#f3c8b0"/>
+  <path fill="none" stroke="#e0a98f" stroke-width="3" stroke-linecap="round" d="M374 402 q7 12 2 24"/>
+  <path fill="none" stroke="#e0a98f" stroke-width="3" stroke-linecap="round" d="M626 402 q-7 12 -2 24"/>
+
+  <!-- ================= FACE ================= -->
+  <path fill="url(#skin)" d="M382 392
+    C382 304 430 268 500 268
+    C570 268 618 304 618 392
+    C618 468 576 546 500 562
+    C424 546 382 468 382 392 Z"/>
+
+  <path fill="#e9b499" opacity=".26" d="M382 392 C382 304 430 268 500 268 C472 300 456 348 456 400 C456 470 472 528 500 562 C424 546 382 468 382 392 Z"/>
+
+  <!-- jaw shadow on neck -->
+  <ellipse cx="500" cy="568" rx="40" ry="14" fill="#d99b7f" opacity=".38" filter="url(#soft2)"/>
+
+  <!-- ================= BANGS (side swept) ================= -->
+  <path fill="url(#bangs)" d="M372 402
+    C368 298 432 256 500 256
+    C570 256 630 298 628 402
+    C620 358 602 336 580 328
+    C568 352 546 366 518 368
+    C496 340 470 328 442 332
+    C414 336 388 364 372 402 Z"/>
+
+  <!-- bangs highlight -->
+  <path fill="#6a5585" opacity=".5" d="M414 332 C448 300 500 288 542 294 C506 300 470 314 446 340 Z"/>
+
+  <!-- ================= EYEBROWS ================= -->
+  <path fill="none" stroke="#3a2c4a" stroke-width="9" stroke-linecap="round" d="M414 366 Q448 344 482 360"/>
+  <path fill="none" stroke="#3a2c4a" stroke-width="9" stroke-linecap="round" d="M518 360 Q552 344 586 366"/>
+
+  <!-- ================= EYES ================= -->
+  <g>
+    <ellipse cx="448" cy="428" rx="37" ry="43" fill="#ffffff"/>
+    <ellipse cx="448" cy="430" rx="27" ry="34" fill="url(#iris)"/>
+    <ellipse cx="448" cy="432" rx="14" ry="18" fill="#22160c"/>
+    <circle cx="438" cy="416" r="9" fill="#ffffff"/>
+    <circle cx="458" cy="446" r="5" fill="#ffffff" opacity=".7"/>
+    <path fill="none" stroke="#2b2338" stroke-width="8" stroke-linecap="round" d="M410 410 Q448 382 486 410"/>
+    <path fill="none" stroke="#2b2338" stroke-width="5" stroke-linecap="round" d="M486 410 q8 6 12 16"/>
+    <path fill="none" stroke="#2b2338" stroke-width="4" stroke-linecap="round" opacity=".55" d="M414 448 Q430 464 452 466"/>
+
+    <ellipse cx="552" cy="428" rx="37" ry="43" fill="#ffffff"/>
+    <ellipse cx="552" cy="430" rx="27" ry="34" fill="url(#iris)"/>
+    <ellipse cx="552" cy="432" rx="14" ry="18" fill="#22160c"/>
+    <circle cx="542" cy="416" r="9" fill="#ffffff"/>
+    <circle cx="562" cy="446" r="5" fill="#ffffff" opacity=".7"/>
+    <path fill="none" stroke="#2b2338" stroke-width="8" stroke-linecap="round" d="M514 410 Q552 382 590 410"/>
+    <path fill="none" stroke="#2b2338" stroke-width="5" stroke-linecap="round" d="M514 410 q-8 6 -12 16"/>
+    <path fill="none" stroke="#2b2338" stroke-width="4" stroke-linecap="round" opacity=".55" d="M586 448 Q570 464 548 466"/>
+  </g>
+
+  <!-- ================= BLUSH ================= -->
+  <ellipse cx="404" cy="478" rx="30" ry="16" fill="#f9a8b8" opacity=".5" filter="url(#soft)"/>
+  <ellipse cx="596" cy="478" rx="30" ry="16" fill="#f9a8b8" opacity=".5" filter="url(#soft)"/>
+
+  <!-- ================= NOSE ================= -->
+  <path fill="none" stroke="#d9a087" stroke-width="4" stroke-linecap="round" d="M498 470 q9 10 1 16"/>
+
+  <!-- ================= MOUTH ================= -->
+  <path fill="#d9756f" d="M474 506 Q500 532 526 506 Q500 516 474 506 Z"/>
+  <path fill="none" stroke="#b85a56" stroke-width="3" stroke-linecap="round" d="M474 506 Q500 532 526 506"/>
+
+  <!-- ================= FLOWER CLIP ================= -->
+  <g transform="translate(650,318)">
+    <g fill="url(#petal)" stroke="#f472b6" stroke-width="2">
+      <ellipse cx="0" cy="-22" rx="13" ry="19"/>
+      <ellipse cx="0" cy="-22" rx="13" ry="19" transform="rotate(72)"/>
+      <ellipse cx="0" cy="-22" rx="13" ry="19" transform="rotate(144)"/>
+      <ellipse cx="0" cy="-22" rx="13" ry="19" transform="rotate(216)"/>
+      <ellipse cx="0" cy="-22" rx="13" ry="19" transform="rotate(288)"/>
+    </g>
+    <circle r="11" fill="#fde68a" stroke="#f5c542" stroke-width="2"/>
+  </g>
+</svg>
